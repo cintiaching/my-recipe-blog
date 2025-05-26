@@ -25,11 +25,15 @@ SECRET_KEY = "django-insecure-ty#mlrr_$o_!fux!)o!rslw92&vm5w34fzk0wg&e@aq!1pq^d8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS is not applied while debug mode is on or when the tests are run. Once you
+# move your site to production and set DEBUG to False, you will have to add your domain/host
+# to this setting to allow it to serve your Django site.
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# INSTALLED_APPS is a setting you will have to edit for all projects. This setting tells Django which
+# applications are active for this site.
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -49,6 +53,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# ROOT_URLCONF indicates the Python module where the root URL patterns of your application
+# are defined.
 ROOT_URLCONF = "my_recipe_backend.urls"
 
 TEMPLATES = [
@@ -72,6 +78,8 @@ WSGI_APPLICATION = "my_recipe_backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES is a dictionary that contains the settings for all the databases to be used in the project.
+# There must always be a default database. The default configuration uses a SQLite3 database.
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
