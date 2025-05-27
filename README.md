@@ -20,6 +20,23 @@ Note for myself to remember how to set up from scratch.
   npm run dev
   ```
 
+Notes
+- `npm run dev` starts the development server. 
+- `npm start` runs the production server after building with `npm run build`.
+
+In short, use npm run dev while developing to get fast feedback and live updates, 
+and use npm start to run your app in production or after building it for deployment.
+
+- install bootstrap and reactstrap to provide user interface tools.
+```shell
+npm install bootstrap reactstrap
+```
+
+- Open index.js in your code editor and add bootstrap.min.css:
+```typescript
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
 ### Django
 
 This will create a Django project with the name my_recipe_backend.
@@ -65,3 +82,4 @@ With the application structure ready, we can start building the data models for 
 In case I want to read them again
 
 - https://blog.logrocket.com/build-react-typescript-app-vite/#creating-vite-project
+- https://hackernoon.com/reactstrap-vs-react-bootstrap
